@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[portrait, margin=1.5in]{geometry}
+% \usepackage{mathpazo}
+
+\usepackage[T1]{fontenc}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{cochineal}
+
+% \usepackage{fontspec}
+% \setmainfont[Numbers=Lining]{CormorantGaramond}
+
+\usepackage{bm}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{xparse}
+\usepackage{physics}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings, angles, quotes}
+\usepackage{dsfont}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{tensor}
+\usepackage{upgreek}
+\usepackage{marginnote}
+\usepackage[title]{appendix}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{slashed}
+\usepackage[com pat=1.1.0]{tikz-feynman}
+\usepackage[backend=biber,style = ieee, {url=false, eprint = false, isbn = false, doi = false}]{biblatex}
+\usepackage{fancyhdr}
+
+\AtEveryBibitem{%
+    \clearfield{pages}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Michael Virgato}
+\lhead{Title}
+\rfoot{Page \thepage}
+ 
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% \addbibresource{}
+\newcommand{\del}{\partial}
+\newcommand{\la}{\mathcal{L}}
+\newcommand{\s}{\slashed}
+\newcommand{\avg}[1]{\langle #1 \rangle}
+
+\title{Title}
+\author{Michael Virgato}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\subfile{Sections/section1}
+\end{document}
