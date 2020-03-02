@@ -1,11 +1,11 @@
 \documentclass{article}
 \usepackage[portrait, margin=1.5in]{geometry}
-% \usepackage{mathpazo}
+
 
 \usepackage[T1]{fontenc}
-\usepackage[cmintegrals,cmbraces]{newtxmath}
-\usepackage{cochineal}
-
+% \usepackage[cmintegrals,cmbraces]{newtxmath}
+% \usepackage{cochineal}
+\usepackage{mathpazo}
 % \usepackage{fontspec}
 % \setmainfont[Numbers=Lining]{CormorantGaramond}
 
@@ -31,7 +31,7 @@
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{slashed}
-\usepackage[com pat=1.1.0]{tikz-feynman}
+% \usepackage[com pat=1.1.0]{tikz-feynman}
 \usepackage[backend=biber,style = ieee, {url=false, eprint = false, isbn = false, doi = false}]{biblatex}
 \usepackage{fancyhdr}
 
@@ -45,14 +45,51 @@
 \lhead{Title}
 \rfoot{Page \thepage}
  
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% 		      PAGE SETTINGS 		   %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\textwidth}{425pt}
+\setlength{\textwidth}{475pt}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textheight}{655pt}
+\setlength{\oddsidemargin}{-14pt}
+
+\renewcommand{\arraystretch}{1}
+\linespread{1.1}
+
+% Numbering of equations
+\numberwithin{equation}{section}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
 
+
 % \addbibresource{}
+% =============================================================================================
+
+
 \newcommand{\del}{\partial}
-\newcommand{\la}{\mathcal{L}}
+\newcommand{\La}{\mathcal{L}}
+\newcommand{\M}{\mathcal{M}}
 \newcommand{\s}{\slashed}
+\renewcommand{\inf}{\infty}
+
+% =============================================================================================
+
+\newcommand{\tS}[1]{ \textsuperscript{#1} }
 \newcommand{\avg}[1]{\langle #1 \rangle}
+\renewcommand{\dd}{\textrm{d}}
+
+
+
+% =============================================================================================
+
+\newcommand{\lb}{\left(}
+\newcommand{\rb}{\right)}
+
+\newcommand{\lbr}{\left[}
+\newcommand{\rbr}{\right]}
+% =============================================================================================
 
 \title{Title}
 \author{Michael Virgato}
@@ -61,7 +98,5 @@
 \begin{document}
 
 \maketitle
-
-\section{Introduction}
-\subfile{Sections/section1}
+\input{Sections/section1}
 \end{document}
